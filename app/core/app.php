@@ -1,5 +1,6 @@
 <?php
 
+//url router it will get whatever is in url and run specific class name with specific function inside
 //all the functionality starts from here
 class App
 {
@@ -35,7 +36,11 @@ class App
                 unset($url[1]);//so its removed from the array
             }
         }
-        show($url);
+    
+        $this->params = array_values($url);//[0],[1],[2]...
+        //run the class and method
+        call_user_func_array([$this->controller,$this->method], $this->params);
+
     }
 
     //spliting url so we can get individual components and use them to access to 
@@ -43,7 +48,8 @@ class App
     private function splitURL()
     {
         //explode converts string into an array,trim removes what you want
-        return explode("/", trim($_GET['url'],"/"));
+        //filter_var for protection!!(ex. someone can put malicious code in url)
+        return explode("/", filter_var(trim($_GET['url'],"/"), FILTER_SANITIZE_URL));
     }
 }
 
