@@ -49,7 +49,14 @@ class App
     {
         //explode converts string into an array,trim removes what you want
         //filter_var for protection!!(ex. someone can put malicious code in url)
-        return explode("/", filter_var(trim($_GET['url'],"/"), FILTER_SANITIZE_URL));
+        //if its empty assign a default value of home
+        $url = isset($_GET['url']) ? $_GET['url'] : "home";
+        return explode("/", filter_var(trim($url, "/"), FILTER_SANITIZE_URL));
     }
 }
 
+//on line 54 we got error undefined index url
+//we got to set a default value to url
+//in the htacces file we said to put everything from url in the $url but if there is nothing
+//then we get nothing to show so it becomes undefined index
+//fix on line 53
