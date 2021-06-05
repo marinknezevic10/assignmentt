@@ -6,8 +6,9 @@ class Home extends Controller //inheritance
     function index()
         {
             $db = new Database();
-            show($db->read("select * from images"));
-            $this->view("home");//caling function from line 11, in the brackets goes name of view file
+            $data = $db->read("select * from images");
+            show($data[0]->image);
+            $this->view("home");//in the brackets goes name of view file
         }
     
 }
