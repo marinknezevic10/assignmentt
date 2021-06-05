@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minimalista - New Amazing HTML5 Template</title>
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/icons.css">
-    <link rel="stylesheet" href="css/responsee.css">
-    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
-    <link rel="stylesheet" href="css/lightcase.css">
+    <link rel="stylesheet" href="<?= ASSETS ?>template/css/components.css">
+    <link rel="stylesheet" href="<?= ASSETS ?>template/css/icons.css">
+    <link rel="stylesheet" href="<?= ASSETS ?>template/css/responsee.css">
+    <link rel="stylesheet" href="<?= ASSETS ?>template/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="<?= ASSETS ?>template/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="<?= ASSETS ?>template/css/lightcase.css">
     <!-- CUSTOM STYLE -->      
-    <link rel="stylesheet" href="css/template-style.css">
+    <link rel="stylesheet" href="<?= ASSETS ?>template/css/template-style.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,400,600,900&subset=latin-ext" rel="stylesheet"> 
-    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>      
+    <script type="text/javascript" src="<?= ASSETS ?>template/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="<?= ASSETS ?>template/js/jquery-ui.min.js"></script>      
   </head>
 
   <body class="size-1140">
@@ -28,9 +28,9 @@
           <div class="s-12 l-2">
             <a href="index.html" class="logo">
               <!-- Logo version before sticky nav -->
-              <img class="logo-before" src="img/logo-dark.png" alt="">
+              <img class="logo-before" src="<?= ASSETS ?>template/img/logo-dark.png" alt="">
               <!-- Logo version after sticky nav -->
-              <img class="logo-after" src="img/logo-dark.png" alt="">
+              <img class="logo-after" src="<?= ASSETS ?>template/img/logo-dark.png" alt="">
             </a>
           </div>
           <div class="s-12 l-10">
@@ -66,7 +66,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-01.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-01.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -77,7 +77,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-02.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-02.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -88,7 +88,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>                  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-03.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-03.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -99,7 +99,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-04.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-04.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -110,7 +110,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-05.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-05.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -121,7 +121,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-06.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-06.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -132,7 +132,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-07.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-07.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -143,7 +143,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-08.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-08.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -154,7 +154,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-09.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-09.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -165,7 +165,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-10.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-10.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -176,7 +176,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-11.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-11.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -187,7 +187,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-12.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-12.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -198,7 +198,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-01.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-01.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -209,7 +209,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-02.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-02.jpg" alt=""/>
               </a>	
             </div>
             <div class="s-12 m-6 l-five">
@@ -220,7 +220,7 @@
                     <p class="text-white text-size-14 margin-bottom-20">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.</p>  
                   </div> 
                 </div> 
-                <img class="full-img" src="img/portfolio/thumb-03.jpg" alt=""/>
+                <img class="full-img" src="<?= ASSETS ?>template/img/portfolio/thumb-03.jpg" alt=""/>
               </a>	
             </div>
           </div>  
@@ -281,9 +281,9 @@
         </section>
       </footer>
     </div>
-    <script type="text/javascript" src="js/responsee.js"></script>
-    <script type="text/javascript" src="js/jquery.events.touch.js"></script>
-    <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
-    <script type="text/javascript" src="js/template-scripts.js"></script> 
+    <script type="text/javascript" src="<?= ASSETS ?>template/js/responsee.js"></script>
+    <script type="text/javascript" src="<?= ASSETS ?>template/js/jquery.events.touch.js"></script>
+    <script type="text/javascript" src="<?= ASSETS ?>template/owl-carousel/owl.carousel.js"></script>
+    <script type="text/javascript" src="<?= ASSETS ?>template/js/template-scripts.js"></script> 
   </body>
 </html>
