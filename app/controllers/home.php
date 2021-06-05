@@ -6,7 +6,7 @@ class Home extends Controller //inheritance
     function index()
         {
             $data['page_title'] = 'Home';
-            $this->view("home", $data);//in the brackets goes name of view file
+            $this->view("template/index", $data);//in the brackets goes name of view file
         }
     
 }
