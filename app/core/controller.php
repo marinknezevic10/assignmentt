@@ -4,7 +4,7 @@
 //here we create functionallity that is used in all controllers
 class Controller 
 {
-    protected function view($view)
+    protected function view($view,$data = [])//data parametar so we can send data to view
     {
         //if the file exists show it to user
         if(file_exists("../app/views/". $view . ".php"))
