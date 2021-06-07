@@ -1,5 +1,5 @@
 <?php 
-//reminder: everytime we add a file in core we must include it there
+//reminder: everytime I add a file in core I must include it here
 
 require "../app/core/config.php";
 require "../app/core/controller.php";
