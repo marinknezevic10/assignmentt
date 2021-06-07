@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minimalista - New Amazing HTML5 Template</title>
+    <title><?= $data['page_title']. " | " . WEBSITE_NAME ?></title>
     <link rel="stylesheet" href="<?= ASSETS ?>template/css/components.css">
     <link rel="stylesheet" href="<?= ASSETS ?>template/css/icons.css">
     <link rel="stylesheet" href="<?= ASSETS ?>template/css/responsee.css">
@@ -40,6 +40,9 @@
                 <li><a href="<?php ROOT ?>home">Home</a></li>
                 <li><a href="<?php ROOT ?>about">About Us</a></li>             
                 <li><a href="<?php ROOT ?>contact">Contact</a></li>
+                <li><a href="<?php ROOT ?>login">Login</a></li>
+                <li><a href="<?php ROOT ?>signup">Signup</a></li>
+                <li><a href="<?php ROOT ?>upload">Upload</a></li>
               </ul>
             </div>
           </div>  
