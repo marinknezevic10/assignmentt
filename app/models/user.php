@@ -32,7 +32,33 @@ class User
 
     function signup($POST)
     {
+        $db = new Database();
 
+        $_SESSION['error'] = "";
+        if(isset($POST['username']) && isset($POST['password']))
+        {
+            $arr['username'] = $POST['username'];
+            $arr['password'] = $POST['password'];
+            $arr['password_confirm'] = $POST['password_confirm'];
+            $arr['email'] = $POST['email'];  
+
+            $query = "insert into users (username,password,email) values(:username,:password,:email)";
+            $data = $db->write($query, $arr);
+            if($data)
+            {
+                header("Location:". ROOT . "login");
+                die;
+            }
+            
+        }else{
+
+            $_SESSION['error'] = "Please enter valid username and password";
+        }
+        
+        if($password != $password_confirm)
+            {
+                echo "Passwords not matching";
+            }
     }
 
     function check_login()//checking if user is logged in
