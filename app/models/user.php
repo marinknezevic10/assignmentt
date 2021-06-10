@@ -23,7 +23,7 @@ class User
             }else{
                 
                 $_SESSION['error'] = "Wrong username or password";
-
+            }
         }else{
 
             $_SESSION['error'] = "Please enter valid username and password";
@@ -38,7 +38,7 @@ class User
         if(isset($POST['username']) && isset($POST['password']))
         {
             $arr['username'] = $POST['username'];
-            $arr['password'] = $POST['password'];
+            $arr['password'] = md5($POST['password']);
             $arr['password_confirm'] = $POST['password_confirm'];
             $arr['email'] = $POST['email'];  
 
@@ -54,11 +54,14 @@ class User
 
             $_SESSION['error'] = "Please enter valid username and password";
         }
-        
-        if($password != $password_confirm)
-            {
-                echo "Passwords not matching";
-            }
+
+        if ($_POST["password"] === $_POST["password_confirm"]) {
+            
+            return true;
+        }
+        else {
+            echo "Passwords not matching";
+        }
     }
 
     function check_login()//checking if user is logged in
