@@ -19,6 +19,7 @@ class User
                 //logged in
                 $_SESSION['user_id'] = $data[0]->userid;
                 $_SESSION['username'] = $data[0]->username;
+                $_SESSION['user_url'] = $data[0]->url_address;//special id indentifier
             }else{
                 
                 $_SESSION['error'] = "Wrong username or password";
@@ -34,8 +35,27 @@ class User
 
     }
 
-    function check_login()
+    function check_login()//checking if user is logged in
     {
 
+        $db = new Database();
+        if(isset($_SESSION['user_url']))
+        {
+            $arr['user_url'] = $_SESSION['user_url']; 
+
+            $query = "select * from users where url_address =:user_url limit 1";
+            $data = $db->read($query, $arr);
+            if(is_array($data))
+            {
+                //logged in
+                $_SESSION['user_id'] = $data[0]->userid;
+                $_SESSION['username'] = $data[0]->username;
+                $_SESSION['user_url'] = $data[0]->url_address;//special id indentifier
+
+                return true;
+            }
+        }
+            return false;
+        
     }
 }
