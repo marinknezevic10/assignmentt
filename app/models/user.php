@@ -39,10 +39,11 @@ class User
         {
             $arr['username'] = $POST['username'];
             $arr['password'] = md5($POST['password']);
-            $arr['password_confirm'] = $POST['password_confirm'];
-            $arr['email'] = $POST['email'];  
+            $arr['email'] = $POST['email'];
+            $arr['url_address'] = get_random_string_max(60);
+            $arr['date'] = date("Y-m-d H:i:s");  
 
-            $query = "insert into users (username,password,email) values(:username,:password,:email)";
+            $query = "insert into users (username,password,email,url_address,date) values(:username,:password,:email,:url_address,:date)";
             $data = $db->write($query, $arr);
             if($data)
             {
