@@ -32,38 +32,38 @@ class User
 
     function signup($POST)
     {
-        $db = new Database();
+
+        $DB = new Database();
 
         $_SESSION['error'] = "";
-        if(isset($POST['username']) && isset($POST['password']))
+        if(isset($POST['username']) && ($POST['password']))
         {
-            $arr['username'] = $POST['username'];
-            $arr['password'] = md5($POST['password']);
-            $arr['email'] = $POST['email'];
-            $arr['url_address'] = get_random_string_max(60);
-            $arr['date'] = date("Y-m-d H:i:s");  
+    
+        $arr['username'] = $POST['username'];
+        $arr['password'] = md5($POST['password']);
+        $arr['password_confirm'] = md5($POST['password_confirm']);
+        $arr['email'] = $POST['email'];
+        $arr['url_address'] = get_random_string_max(60);
+        $arr['date'] = date("Y-m-d H:i:s");
 
-            $query = "insert into users (username,password,email,url_address,date) values(:username,:password,:email,:url_address,:date)";
-            $data = $db->write($query, $arr);
+        $query = "insert into users (username,password,password_confirm,email,url_address,date) values(:username,:password,:password_confirm,:email,:url_address,:date)";
+        $data = $DB->write($query, $arr);
             if($data)
             {
-                header("Location:". ROOT . "login");
+
+                header("Location:" . ROOT . "home");
                 die;
             }
-            
+
         }else{
 
-            $_SESSION['error'] = "Please enter valid username and password";
-        }
-
-        if ($_POST["password"] === $_POST["password_confirm"]) {
-            
-            return true;
-        }
-        else {
-            echo "Passwords not matching";
+            $_SESSION['error'] = "please enter valid username and password";
         }
     }
+        
+
+        
+
 
     function check_login()//checking if user is logged in
     {
