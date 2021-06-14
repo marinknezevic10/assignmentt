@@ -104,7 +104,7 @@ body {
 <?php $this->view("template/header",$data);?>
 
 <div class="login-page">
-  
+<p><?php  check_message() ?></p>
   <div class="form">
     <form class="register-form" method="post">
       <input type="text" name="username" placeholder="username"/>
@@ -116,9 +116,10 @@ body {
       <p><?php  check_message() ?></p>
     </form>
     <form class="login-form" method="post">
-      <input type="text" name="username" placeholder="username"/>
-      <input type="password" name="password" placeholder="password"/>
+      <input type="text" name="username" placeholder="username" required/>
+      <input type="password" name="password" placeholder="password" required/>
       <button>login</button>
+      <p><?php  check_message() ?></p>
       <p class="message">Not registered? <a href="<?php ROOT ?>signup">Create an account</a></p>
     </form>
   </div>

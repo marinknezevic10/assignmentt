@@ -107,18 +107,19 @@ body {
   
   <div class="form">
     <form class="register-form" method="post">
-      <input type="text" name="username" placeholder="username"/>
-      <input type="password" name="password" placeholder="password"/>
-      <input type="password" name="password_confirm" placeholder="password confirmation"/>
-      <input type="text" name="email" placeholder="email address"/>
+      <input type="text" name="username" placeholder="username"required/>
+      <input type="password" name="password" placeholder="password"required/>
+      <input type="password" name="password_confirm" placeholder="password confirmation"required/>
+      <input type="text" name="email" placeholder="email address" required/>
       <button>create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
       <p><?php  check_message() ?></p>
     </form>
     <form class="login-form" method="post">
-      <input type="text" name="username" placeholder="username"/>
-      <input type="password" name="password" placeholder="password"/>
+      <input type="text" name="username" placeholder="username" required/>
+      <input type="password" name="password" placeholder="password" required/>
       <button>login</button>
+      <p><?php  check_message() ?></p>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
   </div>
