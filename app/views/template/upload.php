@@ -2,6 +2,7 @@
 
     <div>
         <section class="section background-white">
+        <p><?php check_message() ?></p>
             <div class="s-12 m-12 l-4 center">
               <h4 class="text-size-20 margin-bottom-20 text-dark text-center">Upload image</h4>
               <form name="contactForm" class="customform" method="post">

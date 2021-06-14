@@ -25,6 +25,13 @@
       <header role="banner" class="position-absolute margin-top-30 margin-m-top-0 margin-s-top-0">    
         <!-- Top Navigation -->
         <nav class="background-transparent background-transparent-hightlight full-width sticky">
+
+        <?php if(isset($_SESSION['user_name'])): ?>
+
+            Hi <?= $_SESSION['user_name']?>
+
+        <?php endif; ?>
+
           <div class="s-12 l-10">
             <div class="top-nav right">
               <p class="nav-text"></p>
@@ -32,8 +39,14 @@
                 <li><a href="<?php ROOT ?>home">Home</a></li>
                 <li><a href="<?php ROOT ?>about">About Us</a></li>             
                 <li><a href="<?php ROOT ?>contact">Contact</a></li>
+
+                <?php if(!isset($_SESSION['user_name'])): ?>
                 <li><a href="<?php ROOT ?>login">Login</a></li>
                 <li><a href="<?php ROOT ?>signup">Signup</a></li>
+                <?php else: ?>
+                <li><a href="<?php ROOT ?>logout">Logout</a></li>
+                <?php endif; ?>
+
                 <li><a href="<?php ROOT ?>upload">Upload</a></li>
               </ul>
             </div>
