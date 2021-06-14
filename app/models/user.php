@@ -43,7 +43,7 @@ class User
             
             }
             else {
-               echo "Passwords don't match";
+                $_SESSION['error'] = "Passwords don't match";
                return false;
             }
     
