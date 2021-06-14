@@ -38,6 +38,14 @@ class User
         $_SESSION['error'] = "";
         if(isset($POST['username']) && ($POST['password']))
         {
+
+            if ($_POST['password'] === $_POST['password_confirm']) {
+            
+            }
+            else {
+               echo "Passwords don't match";
+               return false;
+            }
     
         $arr['username'] = $POST['username'];
         $arr['password'] = md5($POST['password']);
@@ -59,6 +67,9 @@ class User
 
             $_SESSION['error'] = "please enter valid username and password";
         }
+        
+
+
     }
         
 
