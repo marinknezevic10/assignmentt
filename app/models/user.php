@@ -10,16 +10,21 @@ class User
         if(isset($POST['username']) && isset($POST['password']))
         {
             $arr['username'] = $POST['username'];
-            $arr['password'] = $POST['password']; 
+            $arr['password'] = md5($POST['password']);
+             
 
             $query = "select * from users where username = :username && password =:password limit 1";
             $data = $db->read($query, $arr);
             if(is_array($data))
             {
                 //logged in
-                $_SESSION['user_id'] = $data[0]->userid;
-                $_SESSION['username'] = $data[0]->username;
+ 
+                $_SESSION['user_name'] = $data[0]->username;
                 $_SESSION['user_url'] = $data[0]->url_address;//special id indentifier
+
+                header("Location:" . ROOT . "home");
+                die;
+                
             }else{
                 
                 $_SESSION['error'] = "Wrong username or password";
@@ -71,10 +76,6 @@ class User
 
 
     }
-        
-
-        
-
 
     function check_login()//checking if user is logged in
     {
@@ -89,8 +90,8 @@ class User
             if(is_array($data))
             {
                 //logged in
-                $_SESSION['user_id'] = $data[0]->userid;
-                $_SESSION['username'] = $data[0]->username;
+  
+                $_SESSION['user_name'] = $data[0]->username;
                 $_SESSION['user_url'] = $data[0]->url_address;//special id indentifier
 
                 return true;

@@ -113,13 +113,11 @@ body {
       <input type="text" name="email" placeholder="email address"/>
       <button>create</button>
       <p class="message">Already registered? <a href="<?php ROOT ?>login">Sign In</a></p>
-      <p><?php  check_message() ?></p>
     </form>
     <form class="login-form" method="post">
       <input type="text" name="username" placeholder="username" required/>
       <input type="password" name="password" placeholder="password" required/>
       <button>login</button>
-      <p><?php  check_message() ?></p>
       <p class="message">Not registered? <a href="<?php ROOT ?>signup">Create an account</a></p>
     </form>
   </div>

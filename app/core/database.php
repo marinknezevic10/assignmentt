@@ -54,7 +54,7 @@ class database
     public function write($query, $data = [])
     {
         $db = $this->db_connect();
-        $stm = $db->prepare($query);
+        $stm = $db->prepare($query);//prepare for protection
 
         if(count($data)==0)
         {
@@ -64,7 +64,7 @@ class database
                 $check = 1;
             }
         }else{
-            $check = $stm->execute($data);
+            $check = $stm = $stm->execute($data);
         }
 
         if($check)
