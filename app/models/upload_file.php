@@ -37,8 +37,8 @@ class Upload_file
                 $arr['url_address'] = get_random_string_max(60);
                 $arr['date'] = date("Y-m-d H:i:s");
 
-                $query = "insert into images (title,descritpion,url_address,date) values(:title,:description,:url_address,:date)";
-                $data = $DB->write($query, $arr);
+                $query = "insert into images (title,description,url_address,date) values(:title,:description,:url_address,:date)";
+                $data = $db->write($query, $arr);
 
                 if($data)
                 {

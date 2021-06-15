@@ -39,7 +39,7 @@ class User
     function signup($POST)
     {
 
-        $DB = new Database();
+        $db = new Database();
 
         $_SESSION['error'] = "";
         if(isset($POST['username']) && ($POST['password']))

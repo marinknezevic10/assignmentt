@@ -64,7 +64,7 @@ class database
                 $check = 1;
             }
         }else{
-            $check = $stm = $stm->execute($data);
+            $check  = $stm->execute($data);
         }
 
         if($check)
