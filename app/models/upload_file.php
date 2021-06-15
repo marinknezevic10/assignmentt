@@ -5,29 +5,47 @@ class Upload_file
     function upload($POST,$FILES)
     {
         $db = new Database();
+        $_SESSION['error'] = "";
+
+        $allowed[] = "image/jpeg";
 
         if(isset($POST['title']) && ($FILES['file']))
         {
             //upload file
-            show($POST);
-            show($FILES);
-            die;
-            move_uploaded_file($FILES['file']['tmp_name'],);
-
-            //save to db
-            $arr['title'] = $POST['title'];
-            $arr['description'] = $POST['description'];
-            $arr['url_address'] = get_random_string_max(60);
-            $arr['date'] = date("Y-m-d H:i:s");
-
-            $query = "insert into images (title,descritpion,url_address,date) values(:title,:description,:url_address,:date)";
-            $data = $DB->write($query, $arr);
-
-            if($data)
+            if($FILES['file']['name'] != "" && $FILES['file']['error'] == 0 && in_array($FILES['file']['type'], $allowed))
             {
+                $folder = "uploads/";
+                //if file doesnt exist create it
+                if(!file_exists($folder))
+                {
+                    mkdir($folder,0777,true);
+                }
 
-                header("Location:" . ROOT . "home");
-                die;
+                $destination = $folder . $FILES['file']['name'];
+
+                move_uploaded_file($FILES['file']['tmp_name'], $destination);
+            }else{
+
+                $_SESSION['error'] = "This file could not be uploaded";
+            }
+            
+            if($_SESSION['error'] == "")
+            {
+                //save to db
+                $arr['title'] = $POST['title'];
+                $arr['description'] = $POST['description'];
+                $arr['url_address'] = get_random_string_max(60);
+                $arr['date'] = date("Y-m-d H:i:s");
+
+                $query = "insert into images (title,descritpion,url_address,date) values(:title,:description,:url_address,:date)";
+                $data = $DB->write($query, $arr);
+
+                if($data)
+                {
+
+                    header("Location:" . ROOT . "home");
+                    die;
+                }
             }
 
         }
