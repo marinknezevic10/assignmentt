@@ -9,11 +9,12 @@ class User
         $_SESSION['error'] = "";
         if(isset($POST['username']) && isset($POST['password']))
         {
+            //assigning username and password to an array
             $arr['username'] = $POST['username'];
             $arr['password'] = md5($POST['password']);
-             
 
-            $query = "select * from users where username = :username && password =:password limit 1";
+            //we are not using variables because these are gonna be prepared statements :username :password
+            $query = "select * from users where username = :username && password =:password  limit 1";
             $data = $db->read($query, $arr);
             if(is_array($data))
             {

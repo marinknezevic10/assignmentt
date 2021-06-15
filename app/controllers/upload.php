@@ -7,7 +7,7 @@ class Upload extends Controller
         {
 
             header("Location:". ROOT . "upload/image");
-                die;
+                exit;
 
         }
     
