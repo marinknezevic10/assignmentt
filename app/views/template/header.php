@@ -24,16 +24,19 @@
         <!-- Top Navigation -->
         <nav class="background-transparent background-transparent-hightlight full-width sticky">
 
-        <?php if(isset($_SESSION['user_name'])): ?>
-
-            Hi <?= $_SESSION['user_name']?>
-
-        <?php endif; ?>
+        
 
           <div class="s-12 l-10">
             <div class="top-nav right">
               <p class="nav-text"></p>
               <ul class="right chevron">
+              
+              <?php if(isset($_SESSION['user_name'])): ?>
+
+                <li>Hi <?= $_SESSION['user_name']?></li>
+
+              <?php endif; ?>
+
                 <li><a href="<?php ROOT ?>home">Home</a></li>
                 <li><a href="<?php ROOT ?>about">About Us</a></li>             
                 <li><a href="<?php ROOT ?>contact">Contact</a></li>
