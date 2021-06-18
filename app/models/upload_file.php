@@ -36,8 +36,9 @@ class Upload_file
                 $arr['description'] = $POST['description'];
                 $arr['url_address'] = get_random_string_max(60);
                 $arr['date'] = date("Y-m-d H:i:s");
+                $arr['image'] = $destination;
 
-                $query = "insert into images (title,description,url_address,date) values(:title,:description,:url_address,:date)";
+                $query = "insert into images (title,description,url_address,date,image) values(:title,:description,:url_address,:date,:image)";
                 $data = $db->write($query, $arr);
 
                 if($data)
