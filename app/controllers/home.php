@@ -15,6 +15,23 @@ class Home extends Controller //inheritance
 
             $data['posts'] = $result;
 
+            //loading image cropping class
+            $image_class = $this->loadModel("image_class");
+
+            //I want the class to create thumbnails and replace 
+            //the link of actual image with a link of thumbnail
+            //first thing i need to do is to know if posts are an array
+            //foreach so i can go trough each and every post
+            if(is_array($data['posts']))
+            {
+                foreach ($data['posts'] as $key => $value) {
+                    # code...
+                    $all = $data['posts'][$key]->image;
+                    $all = $data['posts'][$key]->image = $image_class->get_thumbnail($all);
+                }
+            }
+
+
             $this->view("template/index", $data);//in the brackets goes name of view file
         }
     
