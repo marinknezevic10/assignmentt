@@ -12,7 +12,7 @@ class Posts
 
         //reading the inquiry
         $data = $db->read($query);
-        
+
         //if its an array return it if its not return false
         if(is_array($data))
         {
