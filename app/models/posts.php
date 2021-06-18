@@ -5,7 +5,7 @@ class Posts
     function get_all()
     {
         //inquiry for gathering images from db
-        $query = "select * all from images order by id desc limit 12";
+        $query = "select * from images order by id desc limit 12";
 
         //connecting to db
         $db = new Database();
