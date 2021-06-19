@@ -6,9 +6,7 @@ class Single_post extends Controller //inheritance
     //link given a default value in case user didnt provide it
     function index($link='')
         {
-            $user = $this->loadModel("user");
-            $result = $user->get_user();
-            $data['users'] = $result;
+            
             
             if($link == '')
             {

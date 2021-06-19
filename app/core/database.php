@@ -1,6 +1,6 @@
 <?php
 
-class database
+class Database
 {
     //connecting with database
     //using pdo in case we use different type of db it still connects

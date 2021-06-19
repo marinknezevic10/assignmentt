@@ -37,16 +37,16 @@
 
               <?php endif; ?>
 
-                <li><a href="<?php ROOT ?>home">Home</a></li>
-                <li><a href="<?php ROOT ?>about">About Us</a></li>             
-                <li><a href="<?php ROOT ?>contact">Contact</a></li>
+                <li><a href="<?= ROOT ?>home">Home</a></li>
+                <li><a href="<?= ROOT ?>about">About Us</a></li>             
+                <li><a href="<?= ROOT ?>contact">Contact</a></li>
 
                 <?php if(!isset($_SESSION['user_name'])): ?>
-                <li><a href="<?php ROOT ?>login">Login</a></li>
-                <li><a href="<?php ROOT ?>signup">Signup</a></li>
+                <li><a href="<?= ROOT ?>login">Login</a></li>
+                <li><a href="<?= ROOT ?>signup">Signup</a></li>
                 <?php else: ?>
-                <li><a href="<?php ROOT ?>logout">Logout</a></li>
-                <li><a href="<?php ROOT ?>upload">Upload</a></li>
+                <li><a href="<?= ROOT ?>logout">Logout</a></li>
+                <li><a href="<?= ROOT ?>upload">Upload</a></li>
                 <?php endif; ?>
               </ul>
             </div>

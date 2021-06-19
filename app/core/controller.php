@@ -1,27 +1,28 @@
 <?php
-
-//main controller
-//here we create functionallity that is used in all controllers
-class Controller 
+//simplifying things
+//functionality that is used in all controllers
+class Controller
 {
-    protected function view($view,$data = [])//data parametar so we can send data to view
+    //since we assigned variable $data any file below that we include will have $data variable
+    //that way we are able to transfer our data
+
+    protected function view($view, $data = [])//reads from the view directory and displays page for user
     {
-        //if the file exists show it to user
-        if(file_exists("../app/views/". $view . ".php"))
+        if(file_exists("../app/views/". $view .".php"))
         {
-            include "../app/views/". $view . ".php";
-        }else{//if the file doesnt exists take the user to 404 page
+            include "../app/views/". $view .".php";
+        }else{
             include "../app/views/404.php";
         }
     }
 
-    //one more function which allows us to load a model
-    protected function loadModel($model)
+    protected function loadModel($model)//loading classes from model
     {
-        if(file_exists("../app/models/". $model . ".php"))
+        if(file_exists("../app/models/". $model .".php"))
         {
-            include "../app/models/". $model . ".php";
-            //instantiating class, assigning it to a variable
+            include "../app/models/". $model .".php";
+            
+            //instantiating class
             return $model = new $model();
         }
         return false;
