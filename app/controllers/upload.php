@@ -5,9 +5,10 @@ class Upload extends Controller
 {
     function index()
         {
+        
 
             header("Location:". ROOT . "upload/image");
-                exit;
+                die;
 
         }
     
@@ -33,4 +34,5 @@ class Upload extends Controller
             $data['page_title'] = 'Upload';
             $this->view("template/upload", $data);
         }
-}
+
+    }
