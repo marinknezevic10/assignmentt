@@ -6,6 +6,9 @@ class Single_post extends Controller //inheritance
     //link given a default value in case user didnt provide it
     function index($link='')
         {
+            $user = $this->loadModel("user");
+            $result = $user->get_user();
+            $data['users'] = $result;
             
             if($link == '')
             {
@@ -22,7 +25,7 @@ class Single_post extends Controller //inheritance
                 $data['posts'] = $result;
 
                 $data['page_title'] = 'Single post';
-                $this->view("template/index", $data);//in the brackets goes name of view file
+                $this->view("template/single_post", $data);//in the brackets goes name of view file
 
             }
         }

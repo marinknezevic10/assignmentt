@@ -14,6 +14,7 @@ class App
     {
         //$this for using the function inside the class
         $url = $this->splitURL();
+        
 
         //this router is responsible for selecting which controller is going to run for our website at the time
         //if file exists it means controller exists so we proceed
@@ -30,6 +31,7 @@ class App
         //if the second variable is set in the url continue
         if(isset($url[1]))
         {
+            //look inside controller, and if method exists continue
             if(method_exists($this->controller, $url[1]))
             {
                 $this->method = $url[1];

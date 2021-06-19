@@ -35,7 +35,7 @@ class Posts
         //if its an array return it if its not return false
         if(is_array($data))
         {
-            return $data;
+            return $data[0];
         }
             return false;
     }
