@@ -8,6 +8,9 @@ class Posts
         //passing int so we get number regardless what user passes to database
         $page_number = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
+        //if the page number is less than 1 then set it to 1 otherwise
+        $page_number = $page_number < 1 ? 1 : $page_number = $page_number;
+ 
         //inquiry for gathering images from db
         $limit = 2;
 
