@@ -4,8 +4,17 @@ class Posts
 {
     function get_all()
     {
+        //if the page number is given assign it if its not page number is 1
+        //passing int so we get number regardless what user passes to database
+        $page_number = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
         //inquiry for gathering images from db
-        $query = "select * from images order by id desc limit 12";
+        $limit = 2;
+
+        //tells database to give next posts
+        $offset = ($page_number -1 ) * $limit;
+
+        $query = "select * from images order by id desc limit $limit offset $offset";
 
         //connecting to db
         $db = new Database();
