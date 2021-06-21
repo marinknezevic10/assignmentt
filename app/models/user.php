@@ -112,22 +112,4 @@ class User
                 die;
     }
 
-    function get_user()
-    {
-        //inquiry for gathering images from db
-        $query = "select * from users where username = :username limit 1";
-        
-        //connecting to db
-        $db = new Database();
-
-        //reading the inquiry
-        $data = $db->read($query);
-
-        //if its an array return it if its not return false
-        if(is_array($data))
-        {
-            return $data;
-        }
-            return false;
-    }
 }

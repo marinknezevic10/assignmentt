@@ -9,7 +9,7 @@
               <img src="<?= ROOT. $data['posts']->image?>"/>
               <br>
               <?= $data['posts']->description?>
-              
+              <br>
             </div>           
           </section>
 

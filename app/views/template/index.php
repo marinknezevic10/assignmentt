@@ -33,6 +33,10 @@
 
           </div>  
         </article>
+        <section>
+            <a href=""><input type="button" class="s-12 submit-form button background-primary text-white" style="width:200px;" value="Previous page"></a>
+            <a href=""><input type="button" class="s-12 submit-form button background-primary text-white" style="width:200px; float:right;" value="Next page"></a>
+        </section>
       </main>
       
       <!-- FOOTER -->
